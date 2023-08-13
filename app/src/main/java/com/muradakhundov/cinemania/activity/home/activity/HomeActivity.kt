@@ -6,7 +6,9 @@ import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.NavigationUI
 import com.muradakhundov.cinemania.R
 import com.muradakhundov.cinemania.databinding.ActivityHomeBinding
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class HomeActivity : AppCompatActivity() {
     private lateinit var binding : ActivityHomeBinding
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -15,6 +17,7 @@ class HomeActivity : AppCompatActivity() {
 
 
         binding = ActivityHomeBinding.inflate(layoutInflater)
+
         setContentView(binding.root)
 
         val navHostFragment = supportFragmentManager.findFragmentById(R.id.fragmentContainerView)  as NavHostFragment

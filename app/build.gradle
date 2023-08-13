@@ -35,7 +35,8 @@ android {
         jvmTarget = '1.8'
     }
 }
-
+apply plugin: 'kotlin-kapt'
+apply plugin: "dagger.hilt.android.plugin"
 dependencies {
     implementation 'com.google.firebase:firebase-auth-ktx:22.1.1'
     implementation 'com.google.firebase:firebase-database-ktx:20.2.2'
@@ -53,4 +54,22 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
     implementation("com.tbuonomo:dotsindicator:5.0")
     implementation "com.airbnb.android:lottie:$lottieVersion"
+    implementation 'com.makeramen:roundedimageview:2.3.0'
+
+    //multi thread
+    implementation 'androidx.multidex:multidex:2.0.1'
+
+    //GLIDE
+    implementation 'com.github.bumptech.glide:glide:4.13.2'
+
+    implementation "com.google.dagger:hilt-android:2.47"
+    kapt "com.google.dagger:hilt-android-compiler:2.47"
+
+    implementation "androidx.lifecycle:lifecycle-viewmodel:2.6.1"
+    implementation "androidx.activity:activity-ktx:1.7.2"
+
+
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation 'com.google.code.gson:gson:2.9.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.5.0'
 }
