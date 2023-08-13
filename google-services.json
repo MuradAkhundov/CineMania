@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "773894161972",
+    "project_id": "cinemania-64b7d",
+    "storage_bucket": "cinemania-64b7d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:773894161972:android:f1198ee5f6b318cba92c61",
+        "android_client_info": {
+          "package_name": "com.muradakhundov.cinemania"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "773894161972-pdusqm1404oc4clasg6s8rblv59ktbgt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBu5Q7AOHH1UUaoE4oj4QmlPfujvir2evk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "773894161972-pdusqm1404oc4clasg6s8rblv59ktbgt.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
