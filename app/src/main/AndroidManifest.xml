@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools">
     <uses-permission android:name="android.permission.INTERNET" />
     <application
+        android:name=".movie.home.hilt.HiltApplication"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -13,22 +14,22 @@
         android:theme="@style/Theme.CineMania"
         tools:targetApi="31">
         <activity
-            android:name=".activity.home.activity.HomeActivity"
+            android:name=".movie.home.activity.HomeActivity"
             android:exported="false" />
         <activity
-            android:name=".activity.auth.activity.SignInActivity"
+            android:name=".movie.auth.activity.SignInActivity"
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".activity.auth.activity.SignUpActivity"
+            android:name=".movie.auth.activity.SignUpActivity"
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".activity.auth.activity.StartActivity"
+            android:name=".movie.auth.activity.StartActivity"
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".activity.splash.SplashScreenActivity"
+            android:name=".movie.splash.SplashScreenActivity"
             android:exported="true"
             android:screenOrientation="portrait">
             <intent-filter>
@@ -38,7 +39,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".activity.onboarding.activity.MainActivity"
+            android:name=".movie.onboarding.activity.MainActivity"
             android:exported="false"
             android:screenOrientation="portrait" />
 

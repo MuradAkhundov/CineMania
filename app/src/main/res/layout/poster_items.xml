@@ -8,10 +8,11 @@
     android:layout_marginTop="10dp">
 
     <com.makeramen.roundedimageview.RoundedImageView
-        android:layout_width="match_parent"
+        android:layout_width="300dp"
         android:layout_height="150dp"
         app:riv_corner_radius="10dp"
         android:src="@color/bgcolor"
+        android:padding="10dp"
         android:scaleType="centerCrop"
         android:id="@+id/moviePoster"/>
 
@@ -22,7 +23,7 @@
         android:layout_height="wrap_content"
         android:text="Movie title"
         android:textColor="@color/white"
-        android:textSize="24sp"
+        android:textSize="15sp"
         android:layout_gravity="bottom"
         android:layout_marginStart="15dp"
         android:layout_marginBottom="45dp"/>
@@ -32,7 +33,7 @@
         android:layout_height="wrap_content"
         android:text="Date"
         android:textColor="@color/white"
-        android:textSize="17sp"
+        android:textSize="12sp"
         android:layout_gravity="bottom"
         android:layout_marginStart="15dp"
         android:layout_marginBottom="16dp"

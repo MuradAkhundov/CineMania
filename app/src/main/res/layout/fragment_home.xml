@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".activity.home.fragment.HomeFragment"
+    tools:context=".movie.home.fragment.HomeFragment"
     android:background="@color/bgcolor">
 
   
@@ -39,6 +39,7 @@
                 android:layout_marginStart="20dp">
 
                 <TextView
+                    android:id="@+id/username"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Hello , Tiffany"
@@ -74,12 +75,14 @@
 
 
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerpopular"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@id/searchView"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="5dp"
+        android:layout_marginStart="10dp"
         android:orientation="horizontal"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         />
