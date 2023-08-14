@@ -3,5 +3,7 @@
     <style name="Base.Theme.CineMania" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your dark theme here. -->
         <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
+        <item name="colorPrimary">@color/cyan</item>
+        <item name="android:statusBarColor">@color/bgcolor</item>
     </style>
 </resources>

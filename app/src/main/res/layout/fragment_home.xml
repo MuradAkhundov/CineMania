@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -7,7 +7,11 @@
     tools:context=".movie.home.fragment.HomeFragment"
     android:background="@color/bgcolor">
 
-  
+
+
+  <androidx.constraintlayout.widget.ConstraintLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent">
 
         <LinearLayout
             android:id="@+id/profileLayout"
@@ -57,35 +61,216 @@
                     />
             </LinearLayout>
         </LinearLayout>
- 
-    
-    <SearchView
-        android:id="@+id/searchView"
-        android:layout_width="match_parent"
+
+
+      <SearchView
+          android:id="@+id/searchView"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginStart="20dp"
+          android:layout_marginEnd="20dp"
+          android:background="@drawable/search_bg"
+          android:iconifiedByDefault="false"
+          android:queryHint="Search a title"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintHorizontal_bias="0.0"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@id/profileLayout" />
+
+      <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/viewpagerpopular"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clipToPadding="false"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:clipChildren="false"
+            android:overScrollMode="never"
+            app:layout_constraintTop_toBottomOf="@id/searchView"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            android:orientation="horizontal"
+            />
+
+
+
+
+    <TextView
+        android:id="@+id/categoryText"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/profileLayout"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp"
-        android:background="@drawable/search_bg"
-        android:queryHint="Search a title"
-        android:iconifiedByDefault="false"
-        />
-
-
+        android:text="Categories"
+        app:layout_constraintTop_toBottomOf="@id/viewpagerpopular"
+        app:layout_constraintStart_toStartOf="@id/searchView"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/white"
+        android:textSize="22sp"/>
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerpopular"
+        android:id="@+id/recyclerCategory"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/searchView"
+        android:clipToPadding="false"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:clipChildren="false"
+        android:overScrollMode="never"
+        app:layout_constraintTop_toBottomOf="@id/categoryText"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="5dp"
-        android:layout_marginStart="10dp"
-        android:orientation="horizontal"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        android:orientation="horizontal"
         />
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+      <LinearLayout
+          android:id="@+id/upcomingLayout"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="vertical"
+          app:layout_constraintTop_toBottomOf="@id/recyclerCategory"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintEnd_toEndOf="parent">
+
+          <RelativeLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginStart="20dp"
+              android:layout_marginTop="20dp"
+              >
+
+
+              <TextView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="Upcoming"
+                  android:textColor="@color/white"
+                  android:textSize="22sp"/>
+
+
+              <TextView
+                  android:id="@+id/seeAllUpcoming"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="See All"
+                  android:textColor="@color/cyan"
+                  android:textSize="22sp"
+                  android:layout_alignParentEnd="true"
+                  android:layout_marginEnd="20dp"
+                  />
+          </RelativeLayout>
+
+
+
+          <androidx.recyclerview.widget.RecyclerView
+              android:id="@+id/recyclerUpcoming"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="horizontal"
+              app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+              android:layout_marginTop="10dp"
+              android:layout_marginStart="10dp"
+              />
+      </LinearLayout>
+      <LinearLayout
+          android:id="@+id/topRatedLayout"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="vertical"
+          app:layout_constraintTop_toBottomOf="@id/upcomingLayout"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintEnd_toEndOf="parent">
+
+          <RelativeLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginStart="20dp"
+              android:layout_marginTop="20dp"
+              >
+
+
+              <TextView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="Top Rated"
+                  android:textColor="@color/white"
+                  android:textSize="22sp"/>
+
+
+              <TextView
+                  android:id="@+id/seeAllTopRated"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="See All"
+                  android:textColor="@color/cyan"
+                  android:textSize="22sp"
+                  android:layout_alignParentEnd="true"
+                  android:layout_marginEnd="20dp"
+                  />
+          </RelativeLayout>
+
+
+
+          <androidx.recyclerview.widget.RecyclerView
+              android:id="@+id/recyclerTopRated"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="horizontal"
+              app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+              android:layout_marginTop="10dp"
+              android:layout_marginStart="10dp"
+              />
+      </LinearLayout>
+
+      <LinearLayout
+          android:id="@+id/nowPlayingLayout"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="vertical"
+          app:layout_constraintTop_toBottomOf="@id/topRatedLayout"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintEnd_toEndOf="parent">
+
+          <RelativeLayout
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_marginStart="20dp"
+              android:layout_marginTop="20dp"
+              >
+
+
+              <TextView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="Now Playing"
+                  android:textColor="@color/white"
+                  android:textSize="22sp"/>
+
+
+              <TextView
+                  android:id="@+id/seeAllNowPlaying"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="See All"
+                  android:textColor="@color/cyan"
+                  android:textSize="22sp"
+                  android:layout_alignParentEnd="true"
+                  android:layout_marginEnd="20dp"
+                  />
+          </RelativeLayout>
+
+
+
+          <androidx.recyclerview.widget.RecyclerView
+              android:id="@+id/recyclerNowPlaying"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="horizontal"
+              app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+              android:layout_marginTop="10dp"
+              android:layout_marginStart="10dp"
+              />
+      </LinearLayout>
+  </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

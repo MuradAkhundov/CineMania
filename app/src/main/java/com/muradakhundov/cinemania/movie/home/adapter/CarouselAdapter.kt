@@ -23,7 +23,7 @@ class CarouselAdapter(
     }
 
     override fun getItemCount(): Int {
-        return 3
+        return movieList.size
     }
 
     override fun onBindViewHolder(holder: CarouselDesignHolder, position: Int) {
